@@ -61,79 +61,61 @@ const Testimonials = () => {
         </p>
       </div>
       <section>
-        {/* Scrollable Section */}
-        {/* Section 1 */}
-        <div className="w-full overflow-x-auto px-3 no-scrollbar">
-          <div
-            className="
-            flex gap-4
-            snap-x snap-mandatory
-            w-max
-            pb-4
-            scroll-smooth
-            "
-          >
-            {testimonials.map((item, index) => {
-              return (
-                <div
-                  key={index}
-                  className="w-[350px] min-w-[350px]  /* prevents shrinking inside scroll area */ rounded-2xl bg-white shadow-md p-4 flex flex-col gap-3 hover:shadow-xl transition-all duration-300 snap-center"
-                >
-                  {/* Top Section */}
-                  <div className="flex items-center gap-3">
-                    <Image
-                      width={45}
-                      alt="person"
-                      src={item.person}
-                      className="rounded-full aspect-square"
-                    />
-                    <div className="flex flex-col">
-                      <p className="font-semibold text-lg">{item.name}</p>
-                      <p className="text-sm opacity-60">{item.role}</p>
-                    </div>
+        {/* SECTION 1 - left direction */}
+        <div className="overflow-hidden w-full">
+          <div className="marquee-track marquee-left">
+            {[...testimonials, ...testimonials].map((item, index) => (
+              <div
+                key={index}
+                className="w-[350px] min-w-[350px] mx-4 rounded-2xl bg-white shadow-lg p-4"
+              >
+                <div className="flex items-center gap-3">
+                  <Image
+                    width={45}
+                    height={45}
+                    src={item.person}
+                    className="rounded-full"
+                    alt=""
+                  />
+                  <div>
+                    <p className="font-semibold text-lg">{item.name}</p>
+                    <p className="text-sm opacity-60">{item.role}</p>
                   </div>
-                  {/* Message */}
-                  <p className="text-sm opacity-80 leading-6">{item.message}</p>
                 </div>
-              );
-            })}
+                <p className="mt-3 text-sm opacity-80 leading-6">
+                  {item.message}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
-        {/* Section 2 */}
-        <div className="w-full overflow-x-auto px-3 no-scrollbar hidden lg:block">
-          <div
-            className="
-            flex gap-4
-            snap-x snap-mandatory
-            w-max
-            pb-4
-            scroll-smooth
-            "
-          >
-            {testimonials.map((item, index) => {
-              return (
-                <div
-                  key={index}
-                  className="w-[350px] min-w-[350px]  /* prevents shrinking inside scroll area */ rounded-2xl bg-white shadow-md p-4 flex flex-col gap-3 hover:shadow-xl transition-all duration-300 snap-center"
-                >
-                  {/* Top Section */}
-                  <div className="flex items-center gap-3">
-                    <Image
-                      width={45}
-                      alt="person"
-                      src={item.person}
-                      className="rounded-full aspect-square"
-                    />
-                    <div className="flex flex-col">
-                      <p className="font-semibold text-lg">{item.name}</p>
-                      <p className="text-sm opacity-60">{item.role}</p>
-                    </div>
+
+        {/* SECTION 2 - right direction */}
+        <div className="overflow-hidden w-full mt-8 hidden lg:block">
+          <div className="marquee-track marquee-right">
+            {[...testimonials, ...testimonials].map((item, index) => (
+              <div
+                key={index}
+                className="w-[350px] min-w-[350px] mx-4 rounded-2xl bg-white shadow-lg p-4"
+              >
+                <div className="flex items-center gap-3">
+                  <Image
+                    width={45}
+                    height={45}
+                    src={item.person}
+                    className="rounded-full"
+                    alt=""
+                  />
+                  <div>
+                    <p className="font-semibold text-lg">{item.name}</p>
+                    <p className="text-sm opacity-60">{item.role}</p>
                   </div>
-                  {/* Message */}
-                  <p className="text-sm opacity-80 leading-6">{item.message}</p>
                 </div>
-              );
-            })}
+                <p className="mt-3 text-sm opacity-80 leading-6">
+                  {item.message}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -56,11 +56,39 @@
 }
 
 .no-scrollbar::-webkit-scrollbar {
-  /* display: none; */
-  height: 2.5px;
-  border-radius: 100%;
-  /* background-color: rgb(185, 182, 182); */
+  display: none;
 }
-.no-scrollbar::-webkit-scrollbar-track {
-  /* background: var(--tertiary-bg); */
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 25s; /* adjust speed */
+}
+
+.marquee-left {
+  animation-name: marquee-left;
+}
+
+.marquee-right {
+  animation-name: marquee-right;
 }

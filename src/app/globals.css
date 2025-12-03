@@ -55,3 +55,12 @@
   }
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  /* display: none; */
+  height: 2.5px;
+  border-radius: 100%;
+  /* background-color: rgb(185, 182, 182); */
+}
+.no-scrollbar::-webkit-scrollbar-track {
+  /* background: var(--tertiary-bg); */
+}

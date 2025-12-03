@@ -1,9 +1,12 @@
 "use client";
 
-// import AboutUs from "./components/AboutUs"
+import Logo from "./components/Logo";
+import AboutUs from "./components/AboutUs";
 import Programs from "../app/components/Programs";
 import Stats from "../app/components/Stats";
 import Testimonials from "../app/components/Testimonials";
+import Training from "../app/components/Training";
+import Footer from "../app/components/Footer";
 
 import { useState, useEffect } from "react";
 
@@ -19,9 +22,13 @@ export default function Home() {
   return (
     <>
       <div className={`${preloader ? "hidden" : "block"}`}>
+        <Logo />
+        <AboutUs />
         <Programs />
         <Stats />
         <Testimonials />
+        <Training />
+        <Footer />
       </div>
       {/* Preloader */}
       <div

@@ -92,3 +92,23 @@
 .marquee-right {
   animation-name: marquee-right;
 }
+
+@keyframes logo-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  } /* Moves half because we duplicate logos */
+}
+
+.logo-track {
+  display: flex;
+  width: max-content;
+  animation: logo-marquee 18s linear infinite; /* speed */
+}
+
+.logo-wrapper {
+  overflow: hidden;
+  width: 100%;
+}

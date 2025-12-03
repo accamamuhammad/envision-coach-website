@@ -8,8 +8,6 @@ import person4 from "../../../public/person-4.jpg";
 import person5 from "../../../public/person-5.jpg";
 
 const Testimonials = () => {
-  const NumberOfRows = [1, 2];
-
   const testimonials = [
     {
       name: "Accama",
@@ -49,7 +47,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className="bg-neutral-100 w-full py-14 space-y-10">
+    <div className="bg-white w-full py-14 space-y-10">
       {/* Header */}
       <div className="space-y-4 flex flex-col items-center lg:w-[55%] mx-auto text-center px-4">
         <h1 className="font-semibold text-3xl lg:text-4xl">
@@ -74,7 +72,7 @@ const Testimonials = () => {
                     width={45}
                     height={45}
                     src={item.person}
-                    className="rounded-full"
+                    className="rounded-full w-12 h-12 aspect-square"
                     alt=""
                   />
                   <div>
@@ -103,7 +101,7 @@ const Testimonials = () => {
                     width={45}
                     height={45}
                     src={item.person}
-                    className="rounded-full"
+                    className="rounded-full w-12 h-12 aspect-square"
                     alt=""
                   />
                   <div>

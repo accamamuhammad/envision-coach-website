@@ -1,6 +1,6 @@
 import React from "react";
 
-const TestimonialBox = ({ name = "John Doe", role = "Client", message = "Amazing service! Highly recommended." }) => {
+const TestimonialBox = ({ name = "John Doe", role = "Client", message = "          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repelldus, reprehenderit culpa! Amet saepe nemo, ducimus." }) => {
   return (
     <div
       className=" 

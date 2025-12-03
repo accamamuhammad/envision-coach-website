@@ -2,7 +2,7 @@ import React from "react";
 import TestimonialBox from "../components/secondary/TestimonialBox";
 
 const Testimonials = () => {
-  const testimonials = [1, 2, 3, 4, 5, 6, 7, 8]; // You can replace with real data
+  const testimonials = [1, 2, 3, 4, 5, 6, 7, 8]; 
 
   return (
     <div className="bg-neutral-100 w-full py-14 space-y-10">

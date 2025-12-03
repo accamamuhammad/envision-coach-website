@@ -1,48 +1,57 @@
 @import "tailwindcss";
 
-
-/* 👇 Add this after the Tailwind directives */
+/* Hide scrollbars */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
-
 .scrollbar-hide {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-
-
+/* Animations */
 @keyframes appear {
   from {
     opacity: 0;
-    scale: 0.5;
+    transform: scale(0.5);
   }
-  to{
+  to {
     opacity: 1;
-    scale: 1;
+    transform: scale(1);
   }
-} 
+}
 
 @keyframes appear-side {
   from {
     opacity: 0;
-    transform: translate(-100px);
+    transform: translateX(-100px);
   }
-  to{
+  to {
     opacity: 1;
-    transform: translate(0px);
+    transform: translateX(0px);
   }
-} 
+}
 
+/* View-timeline animations */
 .pop-out-element {
-  animation: appear linear;
+  animation: appear 1s linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
 }
 
 .pull-out-element {
-  animation: appear-side linear;
+  animation: appear-side 1s linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
 }
+
+/* Fallback for browsers that don't support view animations */
+@supports not (animation-timeline: view()) {
+  .pop-out-element {
+    animation: appear 0.8s ease-out;
+  }
+  .pull-out-element {
+    animation: appear-side 0.8s ease-out;
+  }
+}
+

@@ -1,5 +1,7 @@
 "use client";
 
+import NavBar from "./components/Navbar";
+import Hero from "./components/Hero";
 import Logo from "./components/Logo";
 import AboutUs from "./components/AboutUs";
 import Programs from "../app/components/Programs";
@@ -22,6 +24,8 @@ export default function Home() {
   return (
     <>
       <div className={`${preloader ? "hidden" : "block"}`}>
+        <NavBar />
+        <Hero />
         <Logo />
         <AboutUs />
         <Programs />

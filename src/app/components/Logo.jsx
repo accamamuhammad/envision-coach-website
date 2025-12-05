@@ -11,7 +11,7 @@ const logos = [Logo1, Logo2, Logo3, Logo4, Logo5];
 
 const Logo = () => {
   return (
-    <div className="logo-wrapper py-5">
+    <div className="logo-wrapper py-">
       <div className="logo-track gap-10 items-center">
         {[...logos, ...logos].map((logo, index) => (
           <Image

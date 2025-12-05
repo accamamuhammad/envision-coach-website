@@ -7,8 +7,8 @@ const Training = () => {
         Ready for Training or Consulting to <br className="lg:hidden" /> improve
         Your Career
       </h1>
-      <section className="space-y-6 lg:gap-7 lg:flex lg:flex-row lg:items-center lg:justify-between">
-        <div className="pop-out-element h-56 shadow-md py-6 px-5 rounded-xl gap-3.5 flex items-start justify-between flex-col">
+      <section className="space-y-6 lg:space-y-0 h-fit lg:gap-7  lg:flex lg:flex-row lg:items-center lg:justify-between ">
+        <div className="pull-out-element h-56 shadow-md py-6 px-5 rounded-xl gap-3.5 flex items-start justify-between flex-col">
           <h2 className="text-xl font-medium">Schedule a Free Conultation.</h2>
           <p className="text-sm text-neutral-600">
             Get a free 30min consultation call, to gain valuable inights and a
@@ -18,7 +18,7 @@ const Training = () => {
             Scehdule Conultation
           </button>
         </div>
-        <div className="pop-out-element h-56 shadow-md py-6 px-5 rounded-xl gap-3.5 flex items-start justify-between flex-col">
+        <div className="pull-out-element h-56 shadow-md py-6 px-5 rounded-xl gap-3.5 flex items-start justify-between flex-col">
           <h2 className="text-xl font-medium">
             Find the Appropriate Training.
           </h2>

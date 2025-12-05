@@ -18,12 +18,12 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setPreloader(false);
-    }, 2000);
+    }, 100);
   }, []);
 
   return (
     <>
-      <div className={`${preloader ? "hidden" : "block"}`}>
+      <div className={`${preloader ? "hidden" : "block"} `}>
         <NavBar />
         <Hero />
         <Logo />

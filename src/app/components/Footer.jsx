@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
-// Logos
+// Logo's
 import InstagramLogo from "../../../public/instagram.svg";
 import facebookLogo from "../../../public/facebook.svg";
 import YoutubeLogo from "../../../public/youtube.svg";
@@ -80,7 +81,11 @@ const Footer = () => {
       <div className="w-full bg-neutral-400 h-[0.5px] mt-8 mb-6"></div>
       <div className="w-full flex flex-row justify-between opacity-65 text-sm">
         <p className="lg:text-base">Copyright © 2025</p>
-        <p className="lg:text-base">Built by Accama</p>
+        <p className="lg:text-base hover:text-blue-400">
+          <Link href="https://accama-20-acccama-muhammads-projects.vercel.app/">
+            Built by Accama
+          </Link>
+        </p>
       </div>
     </footer>
   );

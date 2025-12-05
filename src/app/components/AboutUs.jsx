@@ -2,11 +2,10 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <main className="bg-neutral-50 py-5 space-y-5">
+    <main className="bg-neutral-50 py-8 space-y-5">
       <div className="space-y-5 flex flex-col items-center justify-center">
         <h1 className="w-[90%] max-w-[500px] text-center text-3xl font-semibold">
-          Comprehensive Consulting Solutions <br className="hidden sm:block" />
-          Tailored to Your Needs
+          Comprehensive Consulting Solutions
         </h1>
         <p className="w-[90%] max-w-[500px] text-center text-sm">
           With a focus on individual attention, we are committed to delivery

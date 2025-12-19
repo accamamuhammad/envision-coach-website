@@ -75,17 +75,15 @@ const Nav = () => {
         onClick={handleToggleNav}
         className="cursor-pointer lg:hidden"
       ></Image>
-      {/* Button */}
-      <button className="px-4 h-11 bg-blue-600 text-white rounded-lg text-sm border hover:bg-white hover:border-blue-600 hover:text-blue-600 cursor-pointer hidden lg:block">
-        <a
-          href="https://tidycal.com/protusweb/15-minute-meeting"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="pull-out-right-element "
-        >
-          Free Consultation
-        </a>
-      </button>
+      <a
+  href="https://tidycal.com/protusweb/15-minute-meeting"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-4 h-11 bg-blue-600 text-white rounded-lg text-sm border hover:bg-white hover:border-blue-600 hover:text-blue-600 cursor-pointer hidden lg:inline-flex items-center justify-center"
+>
+  Free Consultation
+</a>
+
     </nav>
   );
 };

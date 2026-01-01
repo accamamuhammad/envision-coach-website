@@ -104,7 +104,7 @@ const Page = () => {
       <div className="w-full  flex flex-col lg:flex-row items-center justify-center gap-8 px-8 pb-20">
         {plans.map((plan, index) => (
           <div
-            key={index}3
+            key={index}
             className="w-full max-w-sm bg-white shadow-md rounded-2xl p-6 flex flex-col gap-4"
           >
             <Image width={50} height={50} src={plan.icon} alt="icon" />

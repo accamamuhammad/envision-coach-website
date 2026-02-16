@@ -9,8 +9,8 @@ import handShake from "../../../public/hand-shake.png";
 
 const Page = () => {
   const [togglePrices, SetTogglePrices] = useState(false);
-  const [visibleCards, setVisibleCards] = useState([]);
-  const cardRefs = useRef([]);
+  const [visibleCards, setVisibleCards] = useState<number[]>([]);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     const observers = cardRefs.current.map((ref, index) => {

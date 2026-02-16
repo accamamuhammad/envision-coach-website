@@ -53,13 +53,3 @@ export default function Home() {
   );
 }
 
-/* Structure 
-1. Nav
-2. Hero
-3. About
-4. Programs*
-5. Stats
-6. Testimonials
-7. CTA
-8. Footer
-*/

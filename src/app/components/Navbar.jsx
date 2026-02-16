@@ -31,7 +31,7 @@ const Nav = () => {
     { title: "Services", link: "/services" },
     { title: "About Us", link: "/aboutUs" },
     { title: "Testimonials", link: "/testimonials" },
-    { title: "Team", link: "/team" },
+    { title: "Contact Us", link: "/contactUs" },
   ];
 
   return (

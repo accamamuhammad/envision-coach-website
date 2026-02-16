@@ -4,8 +4,7 @@ const Training = () => {
   return (
     <div className="px-10 py-12 space-y-7 bg-neutral-50">
       <h1 className="font-medium text-3xl lg:text-4xl text-left">
-        Ready for Training or Consulting to <br className="lg:hidden" /> improve
-        Your Career
+        Your Next Level Starts Here 
       </h1>
       <section className="space-y-6 lg:space-y-0 h-fit lg:gap-7  lg:flex lg:flex-row lg:items-center lg:justify-between ">
         <div className="pull-out-element h-56 shadow-md py-6 px-5 rounded-xl gap-3.5 flex items-start justify-between flex-col">

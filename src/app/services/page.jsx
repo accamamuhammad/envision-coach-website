@@ -60,7 +60,7 @@ const Page = () => {
       <NavBar />
 
       {/* Header */}
-      <div className="space-y-4">
+      <div className="space-y-4 mx-10">
         <div className="mx-8 px-3.5 py-1.5 gap-2 w-fit rounded-md flex flex-row items-center bg-blue-600">
           <div className="w-1.5 h-1.5 rounded-full bg-white"></div>
           <p className="text-white">Pricing</p>
@@ -68,6 +68,13 @@ const Page = () => {
         <h1 className="px-8 font-medium text-4xl">
           Maximize ROI and fast growth with our offers
         </h1>
+        <p className="px-8 leading-6 opacity-65">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          libero eaque itaque illum recusandae nihil quis optio voluptates
+          animi, ea, ex a dolores. Cupiditate excepturi quasi nemo ea dolore
+          similique Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Nesciunt libero eaque itaque illum recusandae.
+        </p>
       </div>
 
       {/* Toggle */}

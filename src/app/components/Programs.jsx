@@ -6,7 +6,7 @@ const Programs = () => {
       {/* Header */}
       <div className="space-y-5 text-center">
         <h1 className="text-4xl font-medium leading-11">
-          Programs to Elevate Your Workforce
+          Scale Smarter. Lead Stronger. Grow Faster.
         </h1>
         <p className="text-sm opacity-70">
           Experiential and transformational sales and leadership training

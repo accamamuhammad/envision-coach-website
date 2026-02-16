@@ -24,12 +24,12 @@ const Hero = () => {
         <div className="pop-out-once-element px-3 py-1.5 inline-block rounded-xl border border-neutral-300 text-sm">
           <p className="opacity-65">Employee training and consultant</p>
         </div>
-        <h1 className="text-4xl leading-12 font-medium text-pop-out">
-          Empowring Excellence through Training and Consulting
+        <h1 className="text-3xl sm:text-4xl leading-12 font-medium text-pop-out">
+          Build a Business That Runs <br /> Not One That Runs You.
         </h1>
         <p className="opacity-65 leading-6 text-sm text-pop-out">
-          Our expert training and consulting solutions pave the way for your
-          organization&apos;s success by driving continuous improvement,
+          Strategic coaching for ambitious founders ready to increase revenue,
+          improve systems, and scale with confidence, continuous improvement,
           innovation and exceptional performance.
         </p>
         <div className="space-x-2.5">

@@ -27,7 +27,7 @@ const Nav = () => {
   ];
 
   return (
-    <nav className="bg-white  text-black scroll-smooth sticky top-0 z-50 py-5 px-7 pr-7 w-screen h-fit flex flex-row items-center justify-between">
+    <nav className="bg-white  text-black scroll-smooth sticky top-0 z-50 py-5 px-10 pr-7 w-screen h-fit flex flex-row items-center justify-between">
       {/* Logo Section */}
       <div className="flex gap-1 flex-row items-center bounce-element">
         <Image

@@ -16,14 +16,16 @@ export default function Home() {
   const [preloader, setPreloader] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setPreloader(false);
-    }, 100);
+    }, 2500);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <>
-      <div className={`${preloader ? "hidden" : "block"} `}>
+      <div className={`${preloader ? "hidden" : "block"}`}>
         <NavBar />
         <Hero />
         <Logo />
@@ -34,22 +36,70 @@ export default function Home() {
         <Training />
         <Footer />
       </div>
+
       {/* Preloader */}
       <div
         className={`${
           preloader
-            ? "w-screen h-screen bg-white flex gap-2 flex-col items-center justify-center"
+            ? "fixed inset-0 w-screen h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex flex-col items-center justify-center z-50 transition-opacity duration-500"
             : "hidden"
         }`}
       >
-        <h1 className="font-bold text-2xl inline-block">
-          Envision <span className="border-r-2 pr-1 animate-pulse"></span>
-        </h1>
-        <p className="text-sm opacity-65 b">
-          Were Perfection meets Coaching and Consulting
-        </p>
+        {/* Decorative Elements */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
+        
+        {/* Subtle Grid Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:32px_32px]" />
+
+        {/* Content */}
+        <div className="relative z-10 text-center space-y-6">
+          {/* Logo/Brand */}
+          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 mb-4">
+            <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
+            <span className="text-sm font-semibold text-white tracking-wider">EXCELLENCE CONSULTING</span>
+          </div>
+
+          {/* Main Text with Typing Effect */}
+          <h1 className="font-bold text-4xl sm:text-5xl lg:text-6xl text-white">
+            Envision{" "}
+            <span className="inline-block w-1 h-12 sm:h-14 lg:h-16 bg-blue-500 animate-pulse ml-1 align-middle"></span>
+          </h1>
+
+          {/* Tagline */}
+          <p className="text-lg text-slate-300 max-w-md mx-auto px-4">
+            Where Perfection Meets Coaching and Consulting
+          </p>
+
+          {/* Loading Animation */}
+          <div className="flex items-center justify-center gap-2 mt-8">
+            <div className="w-2 h-2 rounded-full bg-blue-500 animate-bounce-dot-1"></div>
+            <div className="w-2 h-2 rounded-full bg-blue-500 animate-bounce-dot-2"></div>
+            <div className="w-2 h-2 rounded-full bg-blue-500 animate-bounce-dot-3"></div>
+          </div>
+
+          {/* Progress Bar */}
+          <div className="w-64 h-1 bg-white/10 rounded-full overflow-hidden mx-auto mt-8">
+            <div className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-progress"></div>
+          </div>
+        </div>
+
+        {/* Bottom Stats/Features */}
+        <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex gap-8 text-center">
+          <div className="text-white/60 text-xs">
+            <p className="font-semibold text-white mb-1">500+</p>
+            <p>Happy Clients</p>
+          </div>
+          <div className="text-white/60 text-xs">
+            <p className="font-semibold text-white mb-1">35+</p>
+            <p>Years Experience</p>
+          </div>
+          <div className="text-white/60 text-xs">
+            <p className="font-semibold text-white mb-1">160+</p>
+            <p>Countries</p>
+          </div>
+        </div>
       </div>
     </>
   );
 }
-

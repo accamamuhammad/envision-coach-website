@@ -3,8 +3,8 @@ import Image from "next/image";
 import Nav from "../components/Navbar";
 
 // Import your images
-import Team1 from "../../../public/Images/team-photo-1.jpg";
-import Team2 from "../../../public/Images/team-photo-2.jpg";
+import Team1 from "../../../public/team-photo-1.jpg";
+import Team2 from "../../../public/team-photo-2.jpg";
 
 const AboutUsPage = () => {
   const values = [

@@ -1,5 +1,8 @@
+'use client'
+
 import React from "react";
 import Image from "next/image";
+import { useState } from "react";
 
 // Small Logo
 import HandShake from "../../../public/hand-shake.png";
@@ -11,6 +14,8 @@ import Team1 from "../../../public/team-photo-1.jpg";
 import Team2 from "../../../public/team-photo-2.jpg";
 
 const Hero = () => {
+const [imgSrc, setImgSrc] = useState(Team1);
+
   let sp = [
     { name: "Trusted", logo: HandShake },
     { name: "Tailored", logo: Route },
@@ -107,16 +112,14 @@ const Hero = () => {
         <div className="relative w-full max-w-md lg:max-w-lg">
           {/* Main Image */}
           <div className="relative aspect-4/3 sm:aspect-5/4 lg:aspect-4/5 rounded-3xl overflow-hidden shadow-2xl shadow-slate-900/20 ring-1 ring-slate-900/5">
-            <div className="relative w-full h-[320px] sm:h-[420px] lg:h-[520px] rounded-3xl overflow-hidden shadow-2xl">
-              <Image
-                src={Team1}
-                alt="Professional team collaboration"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-700"
-                priority
-              />
-            </div>
-
+            <Image
+              src={imgSrc}
+              alt="Professional team collaboration"
+              fill
+              className="object-cover hover:scale-105 transition-transform duration-700"
+              priority
+              onError={() => setImgSrc(Team2)}
+            />
             {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-linear-to-t from-slate-900/20 via-transparent to-transparent" />
           </div>

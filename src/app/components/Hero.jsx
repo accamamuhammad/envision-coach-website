@@ -8,7 +8,6 @@ import Globe from "../../../public/globe.svg";
 
 // Large Images
 import Team1 from "../../../public/team-photo-1.jpg";
-import Team2 from "../../../public/team-photo-2.jpg";
 
 const Hero = () => {
   let sp = [
@@ -18,7 +17,7 @@ const Hero = () => {
   ];
 
   return (
-    <main className="relative min-h-[85vh] lg:min-h-[90vh] flex flex-col lg:flex-row overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50">
+    <main className="relative min-h-[85vh] lg:min-h-[90vh] flex flex-col lg:flex-row overflow-hidden bg-linear-to-br from-slate-50 via-blue-50/30 to-slate-50">
       {/* Decorative Elements */}
       <div className="absolute top-20 -left-32 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
       <div className="absolute bottom-20 -right-32 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" />
@@ -56,7 +55,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 pt-2">
             <button className="group relative px-6 lg:px-8 py-3 lg:py-4 bg-blue-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-600/30 hover:shadow-xl hover:shadow-blue-600/40 hover:-translate-y-0.5 transition-all duration-200 overflow-hidden">
               <span className="relative z-10 text-sm lg:text-base">Begin Your Transformation</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 bg-linear-to-r from-blue-600 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity" />
             </button>
             <button className="px-6 lg:px-8 py-3 lg:py-4 bg-white/80 backdrop-blur-sm text-slate-900 font-semibold rounded-xl border-2 border-slate-200 hover:border-blue-600 hover:text-blue-600 hover:-translate-y-0.5 transition-all duration-200 shadow-sm hover:shadow-md text-sm lg:text-base">
               Contact Us
@@ -92,7 +91,7 @@ const Hero = () => {
       <section className="relative lg:w-1/2 px-6 sm:px-12 lg:pl-8 lg:pr-16 pb-8 sm:pb-12 lg:py-16 flex items-center justify-center z-10">
         <div className="relative w-full max-w-md lg:max-w-lg">
           {/* Main Image */}
-          <div className="relative aspect-[4/3] sm:aspect-[5/4] lg:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl shadow-slate-900/20 ring-1 ring-slate-900/5">
+          <div className="relative aspect-4/3 sm:aspect-5/4 lg:aspect-4/5 rounded-3xl overflow-hidden shadow-2xl shadow-slate-900/20 ring-1 ring-slate-900/5">
             <Image
               src={Team1}
               alt="Professional team collaboration"
@@ -101,13 +100,13 @@ const Hero = () => {
               priority
             />
             {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-slate-900/20 via-transparent to-transparent" />
           </div>
 
           {/* Floating Card */}
           <div className="hidden md:block absolute -bottom-6 -left-6 lg:-left-8 w-64 p-5 rounded-2xl bg-white/90 backdrop-blur-md shadow-xl shadow-slate-900/10 border border-slate-100">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 rounded-xl bg-linear-to-br from-blue-500 to-blue-600 flex items-center justify-center shrink-0">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>

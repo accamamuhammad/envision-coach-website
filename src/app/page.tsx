@@ -41,7 +41,7 @@ export default function Home() {
       <div
         className={`${
           preloader
-            ? "fixed inset-0 w-screen h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex flex-col items-center justify-center z-50 transition-opacity duration-500"
+            ? "fixed inset-0 w-screen h-screen bg-linear-to-br from-slate-900 via-slate-800 to-slate-900 flex flex-col items-center justify-center z-50 transition-opacity duration-500"
             : "hidden"
         }`}
       >
@@ -50,7 +50,7 @@ export default function Home() {
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
         
         {/* Subtle Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:32px_32px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-size-[32px_32px]" />
 
         {/* Content */}
         <div className="relative z-10 text-center space-y-6">
@@ -80,7 +80,7 @@ export default function Home() {
 
           {/* Progress Bar */}
           <div className="w-64 h-1 bg-white/10 rounded-full overflow-hidden mx-auto mt-8">
-            <div className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-progress"></div>
+            <div className="h-full bg-linear-to-r from-blue-500 to-purple-500 rounded-full animate-progress"></div>
           </div>
         </div>
 

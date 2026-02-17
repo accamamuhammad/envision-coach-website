@@ -18,6 +18,7 @@ A modern, professional consulting and training business website built with Next.
 - 🎪 **Interactive Components** - Engaging hero sections, testimonials carousels, and more
 
 ## 🏗️ Project Structure
+
 ```
 excellence-consulting/
 ├── app/

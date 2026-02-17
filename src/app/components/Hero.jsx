@@ -7,8 +7,7 @@ import Route from "../../../public/route.png";
 import Globe from "../../../public/globe.svg";
 
 // Large Images
-import Team1 from "../../../public/Images/team-photo-1.jpg";
-import Team2 from "../../../public/Images/team-photo-2.jpg";
+import Team1 from "../../../public/team-photo-1.jpg";
 
 const Hero = () => {
   let sp = [

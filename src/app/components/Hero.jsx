@@ -8,6 +8,7 @@ import Globe from "../../../public/globe.svg";
 
 // Large Images
 import Team1 from "../../../public/team-photo-1.jpg";
+import Team2 from "../../../public/team-photo-2.jpg";
 
 const Hero = () => {
   let sp = [

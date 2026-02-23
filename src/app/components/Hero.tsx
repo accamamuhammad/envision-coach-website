@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 
@@ -151,7 +153,9 @@ const Hero = () => {
         <div className="relative w-full max-w-md lg:max-w-lg">
           <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl shadow-slate-900/20 ring-1 ring-slate-900/5">
             <Image
-              src={Team1}
+              src="/team-photo-1.jpg"
+              width={200}
+              height={200}
               alt="Professional team collaboration"
               fill
               className="object-cover hover:scale-105 transition-transform duration-700"

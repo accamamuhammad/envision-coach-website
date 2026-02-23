@@ -8,6 +8,9 @@ A modern, professional consulting and training business website built with Next.
 
 ## ✨ Features
 
+- Dynamic routes
+- ?client=career
+- ?client=tech
 - 🎨 **Modern Design** - Clean, professional UI with gradient backgrounds and glassmorphism effects
 - 📱 **Fully Responsive** - Optimized for all devices from mobile to desktop
 - ⚡ **Performance Optimized** - Built with Next.js 14 App Router for lightning-fast page loads

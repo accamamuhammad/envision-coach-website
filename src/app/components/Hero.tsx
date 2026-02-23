@@ -10,7 +10,7 @@ import Route from "../../../public/route.png";
 import Globe from "../../../public/globe.svg";
 
 // Large Images
-import Team1 from "../../../public/team-photo-1.jpg";
+import Team1 from "../../../public/static/images/team-photo-1.jpg";
 import Team2 from "../../../public/team-photo-2.jpg";
 
 const Hero = () => {
@@ -159,7 +159,7 @@ const Hero = () => {
 
           <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl shadow-slate-900/20 ring-1 ring-slate-900/5">
             <Image
-              src={imgSrc}
+              src={Team1 || './team-photo-2.jpg'}
               alt="Professional team collaboration"
               fill
               className="object-cover hover:scale-105 transition-transform duration-700"

@@ -10,8 +10,8 @@ import Route from "../../../public/route.png";
 import Globe from "../../../public/globe.svg";
 
 // Large Images
-import Team1 from "/images/team-photo-1.jpg";
-import Team2 from "/images/team-photo-2.jpg";
+import Team1 from "../../../public/images/team-photo-1.jpg";
+import Team2 from "../../../public/images/team-photo-2.jpg";
 
 const Hero = () => {
   const searchParams = useSearchParams();

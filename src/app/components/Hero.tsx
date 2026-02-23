@@ -10,11 +10,10 @@ import Route from "../../../public/route.png";
 import Globe from "../../../public/globe.svg";
 
 // Large Images
-import Team1 from "../../../public/static/images/team-photo-1.jpg";
-import Team2 from "../../../public/team-photo-2.jpg";
+import Team1 from "/images/team-photo-1.jpg";
+import Team2 from "/images/team-photo-2.jpg";
 
 const Hero = () => {
-  const [imgSrc, setImgSrc] = useState(Team1);
   const searchParams = useSearchParams();
   const client = searchParams.get("client");
 
@@ -73,7 +72,6 @@ const Hero = () => {
 
   return (
     <main className="relative min-h-[85vh] lg:min-h-[90vh] flex flex-col lg:flex-row overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50">
-      
       {/* Decorative Blur Background */}
       <div className="absolute top-20 -left-32 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
       <div className="absolute bottom-20 -right-32 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" />
@@ -81,7 +79,6 @@ const Hero = () => {
       {/* TEXT SECTION */}
       <section className="relative lg:w-1/2 px-6 sm:px-12 lg:px-16 py-8 sm:py-12 lg:py-16 flex flex-col justify-center z-10">
         <div className="max-w-2xl space-y-6 lg:space-y-8">
-
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-blue-200/50 shadow-sm">
             <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
@@ -149,22 +146,19 @@ const Hero = () => {
               </div>
             ))}
           </div>
-
         </div>
       </section>
 
       {/* IMAGE SECTION */}
       <section className="relative lg:w-1/2 px-6 sm:px-12 lg:pl-8 lg:pr-16 pb-8 sm:pb-12 lg:py-16 flex items-center justify-center z-10">
         <div className="relative w-full max-w-md lg:max-w-lg">
-
           <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl shadow-slate-900/20 ring-1 ring-slate-900/5">
             <Image
-              src={Team1 || './team-photo-2.jpg'}
+              src={Team1}
               alt="Professional team collaboration"
               fill
               className="object-cover hover:scale-105 transition-transform duration-700"
               priority
-              onError={() => setImgSrc(Team2)}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent" />
           </div>
@@ -191,16 +185,12 @@ const Hero = () => {
                 <p className="text-2xl font-bold text-slate-900">
                   {content.statNumber}
                 </p>
-                <p className="text-sm text-slate-600">
-                  {content.statText}
-                </p>
+                <p className="text-sm text-slate-600">{content.statText}</p>
               </div>
             </div>
           </div>
-
         </div>
       </section>
-
     </main>
   );
 };

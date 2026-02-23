@@ -10,6 +10,7 @@ import Testimonials from "../app/components/Testimonials";
 import Training from "../app/components/Training";
 import Footer from "../app/components/Footer";
 
+import { Suspense } from "react";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -27,7 +28,15 @@ export default function Home() {
     <>
       <div className={`${preloader ? "hidden" : "block"}`}>
         <NavBar />
-        <Hero />
+        <Suspense
+          fallback={
+            <div className="min-h-[85vh] flex items-center justify-center">
+              Loading...
+            </div>
+          }
+        >
+          <Hero />
+        </Suspense>
         <Logo />
         <AboutUs />
         <Programs />
@@ -48,7 +57,7 @@ export default function Home() {
         {/* Decorative Elements */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
-        
+
         {/* Subtle Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-size-[32px_32px]" />
 
@@ -57,7 +66,9 @@ export default function Home() {
           {/* Logo/Brand */}
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 mb-4">
             <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-            <span className="text-sm font-semibold text-white tracking-wider">EXCELLENCE CONSULTING</span>
+            <span className="text-sm font-semibold text-white tracking-wider">
+              EXCELLENCE CONSULTING
+            </span>
           </div>
 
           {/* Main Text with Typing Effect */}

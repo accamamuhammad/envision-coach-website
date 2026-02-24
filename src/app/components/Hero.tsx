@@ -156,8 +156,8 @@ const Hero = () => {
         <div className="relative w-full max-w-md lg:max-w-lg">
           <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl shadow-slate-900/20 ring-1 ring-slate-900/5">
             <Image
-              src={content.img}
-              alt="Professional team collaboration"
+              src={Team1}
+              alt="Professional team collaboration test"
               fill
               className="object-cover hover:scale-105 transition-transform duration-700"
               priority

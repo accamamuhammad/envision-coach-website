@@ -36,14 +36,14 @@ export default function Home() {
           }
         >
           <Hero />
+          <Logo />
+          <AboutUs />
+          <Programs />
+          <Stats />
+          <Testimonials />
+          <Training />
+          <Footer />
         </Suspense>
-        <Logo />
-        <AboutUs />
-        <Programs />
-        <Stats />
-        <Testimonials />
-        <Training />
-        <Footer />
       </div>
 
       {/* Preloader */}

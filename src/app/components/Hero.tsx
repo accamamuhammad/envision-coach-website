@@ -9,8 +9,8 @@ import Route from "../../../public/route.png";
 import Globe from "../../../public/globe.svg";
 
 // Large Images
-import Team1 from "../../../public/images/team-photo-1.jpg";
-import Team2 from "../../../public/images/team-photo-2.jpg";
+import Team1 from "../../../public/teamPhoto-1.jpg";
+import Team2 from "../../../public/teamPhoto-2.jpg";
 
 const Hero = () => {
   const searchParams = useSearchParams();
@@ -18,6 +18,7 @@ const Hero = () => {
 
   const copyMap = {
     default: {
+      img: Team1,
       badge: "Employee Training & Consulting",
       headingMain: "Build a Business",
       headingAccent: "That Runs Itself",
@@ -34,6 +35,7 @@ const Hero = () => {
     },
 
     career: {
+      img: Team2,
       badge: "Career Growth & Leadership Coaching",
       headingMain: "Land The Role",
       headingAccent: "You Deserve",
@@ -50,6 +52,7 @@ const Hero = () => {
     },
 
     tech: {
+      img: Team2,
       badge: "Tech Mentorship & Skill Acceleration",
       headingMain: "Break Into Tech",
       headingAccent: "With Confidence",
@@ -153,9 +156,7 @@ const Hero = () => {
         <div className="relative w-full max-w-md lg:max-w-lg">
           <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl shadow-slate-900/20 ring-1 ring-slate-900/5">
             <Image
-              src="/team-photo-1.jpg"
-              width={200}
-              height={200}
+              src={content.img}
               alt="Professional team collaboration"
               fill
               className="object-cover hover:scale-105 transition-transform duration-700"

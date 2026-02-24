@@ -9,7 +9,7 @@ import Route from "../../../public/route.png";
 import Globe from "../../../public/globe.svg";
 
 // Large Images
-import Team1 from "../../../public/person-1.jpg";
+import Team1 from "../../../public/person-5.jpg";
 import Team2 from "../../../public/teamPhoto-2.jpg";
 
 const Hero = () => {
